@@ -61,7 +61,7 @@ public class CalculatorTest extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "Incoming data for negative tests in the Caloric Needs calculator")
+    @Test(dataProvider = "Incoming data for negative tests in the Caloric Needs calculator",retryAnalyzer = Retry.class)
     public void inputsForCaloricNeedsCalcShouldBeRequired(String weight, String height, String age, String distance, String error) {
         loginPage.open();
         loginPage.login(USER, PASSWORD);
@@ -90,7 +90,7 @@ public class CalculatorTest extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "Incoming data for negative tests in the Pace calculator")
+    @Test(dataProvider = "Incoming data for negative tests in the Pace calculator", retryAnalyzer = Retry.class)
     public void inputsForPaceCalcShouldBeRequired(String distance, String hours, String minutes, String seconds, String error) {
         loginPage.open();
         loginPage.login(USER, PASSWORD);
