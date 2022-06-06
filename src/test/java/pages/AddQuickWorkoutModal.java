@@ -2,12 +2,14 @@ package pages;
 
 import dto.QuickAddWorkout;
 import io.qameta.allure.Step;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import wrappers.DropDown;
 import wrappers.Input;
 import wrappers.TextArea;
 
+@Log4j2
 public class AddQuickWorkoutModal extends BasePage{
     public final static By SAVE_BUTTON = By.id("saveButton");
 
@@ -17,6 +19,7 @@ public class AddQuickWorkoutModal extends BasePage{
 
     @Step("Add arguments to Quick Workout")
     public AddQuickWorkoutModal addArgumentsToQuickWorkout(QuickAddWorkout quickAddWorkout) {
+        log.info("Add arguments to Quick Workout");
         driver.findElement(By.id("WorkoutDate")).clear();
         new Input(driver, "Date").write(quickAddWorkout.getWorkoutDate());
         new Input(driver, "Time of Day").write(quickAddWorkout.getTimeOfDay());

@@ -16,6 +16,7 @@ public class Input {
     }
 
     public void write(String text) {
+        log.info("Get input {} and label {}", label);
         driver.findElement(By.xpath(
                 String.format("//label[text()='%s']/..//input", label)
         )).sendKeys(text);

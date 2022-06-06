@@ -1,16 +1,17 @@
 package tests;
 
-import dto.FullAddWorkout;
 import dto.QuickAddWorkout;
+import lombok.extern.log4j.Log4j2;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
+@Log4j2
 public class CalendarTest extends BaseTest{
+
+
     @Test(description = "Adding correct data", retryAnalyzer = Retry.class)
     public void QuickWorkoutOnCalendarPositiveTest() {
-
         QuickAddWorkout quickAddWorkout = QuickAddWorkout.builder()
                 .workoutDate("06/12/2022")
                 .timeOfDay("06:00 AM")
