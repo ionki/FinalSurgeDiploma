@@ -20,8 +20,6 @@ public class BaseTest {
     WorkoutPage workoutPage;
     AddQuickWorkoutModal addQuickWorkoutModal;
     AddQuickWorkoutListPage addQuickWorkoutListPage;
-    AddFullWorkoutModal addFullWorkoutModal;
-    AddFullWorkoutListPage addFullWorkoutListPage;
     String baseUrl = "https://www.fitday.com/fitness/Login.html";
     public static final String USER = "finalsurge17qa@mailinator.com";
     public static final String PASSWORD = "Password01";
@@ -44,8 +42,6 @@ public class BaseTest {
         calculatorPage = new CalculatorPage(driver);
         addQuickWorkoutListPage = new AddQuickWorkoutListPage(driver);
         addQuickWorkoutModal = new AddQuickWorkoutModal(driver);
-        addFullWorkoutListPage = new AddFullWorkoutListPage(driver);
-        addFullWorkoutModal = new AddFullWorkoutModal(driver);
     }
     @AfterMethod(alwaysRun = true, description = "Closing Browser")
     public void close() {
