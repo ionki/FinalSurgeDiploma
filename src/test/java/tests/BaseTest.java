@@ -32,7 +32,7 @@ public class BaseTest {
         {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            //options.addArguments("--headless");
+            options.addArguments("--headless");
             driver = new ChromeDriver(options);
         }
         testContext.setAttribute("driver", driver);
