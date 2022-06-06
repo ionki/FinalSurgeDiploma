@@ -47,12 +47,10 @@ public class BaseTest {
         addFullWorkoutListPage = new AddFullWorkoutListPage(driver);
         addFullWorkoutModal = new AddFullWorkoutModal(driver);
     }
- /*   @AfterMethod(alwaysRun = true, description = "Closing Browser")
+    @AfterMethod(alwaysRun = true, description = "Closing Browser")
     public void close() {
         if (driver != null) {
             driver.quit();
         }
     }
-
-  */
 }

@@ -26,6 +26,12 @@ public class AddFullWorkoutListPage extends BasePage {
         driver.findElement(SELECT_ACTIVITY_TYPE).click();
         return new AddFullWorkoutModal(driver);
     }
+
+    @Step("Search for a workout")
+    public boolean getMessage() {
+        return driver.findElement(By.className("dropdown-toggle")).isDisplayed();
+    }
+
     @Step("Getting error from Quick Workout")
     public String getError() {
         return driver.findElement(ERROR_MESSAGE).getAttribute("innerText");
