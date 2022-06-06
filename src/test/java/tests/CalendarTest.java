@@ -29,8 +29,8 @@ public class CalendarTest extends BaseTest{
         addQuickWorkoutListPage.clickQuickAddWorkout();
         addQuickWorkoutModal.addArgumentsToQuickWorkout(quickAddWorkout);
         addQuickWorkoutModal.save();
-        //String error = addQuickWorkoutListPage.getError();
-        //assertEquals(calculatorPage.getError(), error, "Wrong error message");
+        String message = addQuickWorkoutListPage.getMessage();
+        assertEquals(addQuickWorkoutListPage.getMessage(), message, "Wrong message");
     }
     @Test(description = "Not adding Activity Type data", retryAnalyzer = Retry.class)
     public void QuickWorkoutOnCalendarActivityTypeNegativeTest() {
@@ -54,7 +54,7 @@ public class CalendarTest extends BaseTest{
         addQuickWorkoutModal.addArgumentsToQuickWorkout(quickAddWorkout);
         addQuickWorkoutModal.save();
         String error = addQuickWorkoutListPage.getError();
-        assertEquals(calculatorPage.getError(), error, "Wrong error message");
+        assertEquals(addQuickWorkoutListPage.getError(), error, "Wrong error message");
     }
 
 
@@ -80,7 +80,7 @@ public class CalendarTest extends BaseTest{
         addQuickWorkoutModal.addArgumentsToQuickWorkout(quickAddWorkout);
         addQuickWorkoutModal.save();
         String error = addQuickWorkoutListPage.getError();
-        assertEquals(calculatorPage.getError(), error, "Wrong error message");
+        assertEquals(addQuickWorkoutListPage.getError(), error, "Wrong error message");
     }
 
     @Test(description = "Not adding Pace data", retryAnalyzer = Retry.class)
@@ -105,7 +105,7 @@ public class CalendarTest extends BaseTest{
         addQuickWorkoutModal.addArgumentsToQuickWorkout(quickAddWorkout);
         addQuickWorkoutModal.save();
         String error = addQuickWorkoutListPage.getError();
-        assertEquals(calculatorPage.getError(), error, "Wrong error message");
+        assertEquals(addQuickWorkoutListPage.getError(), error, "Wrong error message");
     }
  /*   @Test//(description = "Adding correct data", retryAnalyzer = Retry.class)
     public void fullAddWorkoutOnCalendarPositiveTest(){
