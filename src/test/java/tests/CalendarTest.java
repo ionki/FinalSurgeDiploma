@@ -107,7 +107,7 @@ public class CalendarTest extends BaseTest{
         String error = addQuickWorkoutListPage.getError();
         assertEquals(calculatorPage.getError(), error, "Wrong error message");
     }
-    @Test//(description = "Adding correct data", retryAnalyzer = Retry.class)
+ /*   @Test//(description = "Adding correct data", retryAnalyzer = Retry.class)
     public void fullAddWorkoutOnCalendarPositiveTest(){
         FullAddWorkout fullAddWorkout = FullAddWorkout.builder()
                 .workoutDate("08/12/2022")
@@ -128,5 +128,7 @@ public class CalendarTest extends BaseTest{
         addFullWorkoutModal.save();
         assertTrue(addFullWorkoutListPage.getMessage(), "Workout added");
     }
+
+  */
 }
 
