@@ -1,4 +1,4 @@
-Progect FinalSurge
+Project FinalSurge
 -----------
 log.finalsurge.com/
 
