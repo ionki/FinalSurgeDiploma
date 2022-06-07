@@ -1,12 +1,10 @@
           Progect FinalSurge
-         
              -----------
          log.finalsurge.com/
              -----------         
              
              
-          Short description
-             
+          Short description    
 Website for creating a workout plan
 
              -----------
