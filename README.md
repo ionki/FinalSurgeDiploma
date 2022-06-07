@@ -6,7 +6,7 @@
           Short description    
 Website for creating a workout plan
 
-             -----------
+           
      CheckList(user is authorized)
              -----------
 1. Add workouts on workout page                                   |passed
