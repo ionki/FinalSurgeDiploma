@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="tests.AnnotationTransformer"/>
+        <listener class-name="tests.TestListener"/>
+    </listeners>
+    <test name="Workout">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.WorkoutTest"/>
+        </classes>
+    </test>
+    <test name="Calculator">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="tests.CalculatorTest"/>
+        </classes>
+    </test>
+    <test name="Calendar">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.CalendarTest"/>
+        </classes>
+    </test>
+</suite>
